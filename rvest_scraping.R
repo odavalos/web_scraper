@@ -3,7 +3,7 @@ library(rvest)
 
 pointsofsignificance <- read_html("https://www.nature.com/collections/qghhqm/pointsofsignificance")
 
-### As the tutorial for using rvest states selectorgadget is used to determine what selector needs to be pulled. 
+### As the tutorial for rvest states selectorgadget is used to determine what selector needs to be pulled. 
 
 ## this works but links are still in html and cannot readily access yet
 paper_urls <- pointsofsignificance %>%
