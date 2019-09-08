@@ -5,23 +5,23 @@ pointsofsignificance <- read_html("https://www.nature.com/collections/qghhqm/poi
 
 ### As the tutorial for rvest states selectorgadget is used to determine what selector needs to be pulled. 
 
-## this works but links are still in html and cannot readily access yet
-paper_urls <- pointsofsignificance %>%
-  html_node(".wysiwyg")#%>%
-  html_node("a") #%>%
-  html_attr("href")
-
-paper_urls
+### this works but links are still in html and cannot readily access yet
+# paper_urls <- pointsofsignificance %>%
+#   html_node(".wysiwyg")#%>%
+#   html_node("a") #%>%
+#   html_attr("href")
+# 
+# paper_urls
 
 
 ### this is better. using selectorgadget allowed me to identify the links as 'p:nth-child(3) strong' as an example so using html_children was my next option
-paper_urls <- pointsofsignificance %>%
-  html_node(".wysiwyg") %>%
-  html_children() %>%
-  html_node("a") %>%
-  html_attr("href")
-
-paper_urls
+# paper_urls <- pointsofsignificance %>%
+#   html_node(".wysiwyg") %>%
+#   html_children() %>%
+#   html_node("a") %>%
+#   html_attr("href")
+# 
+# paper_urls
 
 
 # html node need to be suplied to identify where to scrape just running html_childern did not work
