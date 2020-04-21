@@ -1,5 +1,6 @@
 
 library(rvest)
+library(tidyverse)
 
 pointsofsignificance <- read_html("https://www.nature.com/collections/qghhqm/pointsofsignificance")
 
@@ -28,8 +29,6 @@ paper_names
 
 
 # testing with the first link generating the download link for the paper
-
-library(stringr)
 
 tmp1 <- read_html(paper_urls[1])
 
