@@ -1,6 +1,5 @@
-
-library(rvest)
 library(tidyverse)
+library(rvest)
 
 pointsofsignificance <- read_html("https://www.nature.com/collections/qghhqm/pointsofsignificance")
 
